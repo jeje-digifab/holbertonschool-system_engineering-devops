@@ -1,1 +1,13 @@
 https://github.com/jeje-digifab/holbertonschool-system_engineering-devops/blob/main/web_infrastructure_design/2-secured_and_monitored_web_infrastructure.png
+
+
+The infrastructure adds security and monitoring features for better protection and visibility.
+
+Firewalls: Implemented at each layer (Load Balancer, Web Servers, Database Servers) to filter unauthorized traffic.
+SSL Certificate: Encrypts data exchanged between the client and the web servers (HTTPS).
+Monitoring Clients (Sumologic): Collect performance metrics and error logs from all servers for proactive monitoring.
+Issues:
+
+SSL Termination Risk: SSL encryption stops at the load balancer, leaving internal traffic unencrypted.
+Primary MySQL Limitation: Only one primary server can handle write operations, limiting redundancy.
+Identical Server Configuration: All servers hosting the same components can cause inefficiencies.

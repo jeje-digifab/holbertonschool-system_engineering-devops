@@ -1,1 +1,14 @@
 https://github.com/jeje-digifab/holbertonschool-system_engineering-devops/blob/main/web_infrastructure_design/0-simple_web_stack.png
+
+
+A single server hosts the entire web infrastructure.
+
+Web Server (Nginx): Manages incoming HTTP requests and serves static files.
+Application Server: Executes the business logic and dynamic content generation.
+Database (MySQL): Stores the data, including users, meals, and reservations.
+Domain Name (foobar.com): The domain name resolves to the server IP address using a DNS A record.
+Issues:
+
+Single Point of Failure (SPOF): If the server fails, the entire site goes offline.
+Maintenance Downtime: Server restarts during updates cause downtime.
+Limited Scalability: The single server cannot handle high traffic effectively.

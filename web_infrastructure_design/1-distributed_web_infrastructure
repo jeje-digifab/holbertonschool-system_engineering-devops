@@ -1,1 +1,16 @@
 https://github.com/jeje-digifab/holbertonschool-system_engineering-devops/blob/main/web_infrastructure_design/1-distributed_web_infrastructure.png
+
+
+The infrastructure is distributed across multiple servers for improved reliability.
+
+Load Balancer (HAProxy): Distributes traffic across multiple web servers using a round-robin algorithm.
+Web Servers (Nginx): Serve static files and handle requests.
+Application Servers: Handle dynamic content and process business logic.
+Database Cluster (Primary-Replica MySQL):
+Primary Node: Handles write operations.
+Replica Node: Handles read operations to reduce load on the primary server.
+Issues:
+
+Single Point of Failure: The load balancer is a single point of failure.
+Security Gaps: No firewalls or encryption are in place.
+No Monitoring: Failures could go undetected.
